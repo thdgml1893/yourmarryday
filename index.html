@@ -89,7 +89,45 @@ footer .footer-brand{font-style:italic}
  details summary{font-size:12px;padding:20px 8px}.faq-list{padding:4px 0}
 }
 </style>
-</head>
+
+<style>
+.image-section,.faq-section{width:min(100%,1080px);margin:0 auto;padding:28px 24px;position:relative}
+.image-section>img,.section-heading-image{display:block;width:100%;height:auto}
+.hero-image{padding-top:34px;padding-bottom:20px}
+.price-image{padding-top:10px;padding-bottom:20px}
+.service-image,.event-image{padding-top:24px;padding-bottom:36px}
+.section-heading-image{max-width:100%;margin:0 auto 22px}
+.service-image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.service-image-grid img{width:100%;height:auto;display:block}
+.image-link-overlay{position:absolute}
+.image-link-overlay a{display:block;opacity:0;width:100%;height:100%;overflow:hidden}
+.price-cta-link{left:65%;top:70%;width:25%;height:20%}
+.event-link-one{left:8%;top:52%;width:42%;height:15%}
+.event-link-two{left:53%;top:52%;width:42%;height:15%}
+.reservation-image{padding-top:25px;padding-bottom:30px}
+.reservation-link{left:65%;top:30%;width:27%;height:28%}
+.faq-section{padding-top:24px;padding-bottom:40px}
+.faq-list{max-width:720px;margin:0 auto;background:#fff;padding:12px 0}
+.faq-list details{border-bottom:1px solid #bdbdbd;padding:0 6px}
+.faq-list summary{list-style:none;cursor:pointer;padding:22px 8px;font-size:14px;display:flex;justify-content:space-between;gap:18px;align-items:center}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"⌄";font-size:22px;color:#777}
+.faq-list details[open] summary:after{content:"⌃"}
+.faq-list details p{padding:0 8px 20px;margin:0;color:#666;font-size:14px;line-height:1.8}
+.faq-link{display:inline-block;margin:22px 8px;color:#328ca3;font-size:13px}
+.social-links{display:flex;justify-content:center;gap:12px;margin:24px auto 0}
+.social-links a{width:38px;height:38px;border-radius:8px;background:#ffe500;display:grid;place-items:center;text-decoration:none;font-weight:900;color:#111}
+.social-links a.blog{background:#111;color:#00d26a;font-size:24px}
+.social-caption{text-align:center;color:#666;font-size:11px;margin-top:8px}
+@media(max-width:650px){
+ .image-section,.faq-section{padding-left:12px;padding-right:12px}
+ .hero-image{padding-top:16px}
+ .service-image-grid{gap:9px}
+ .faq-list summary{font-size:12px;padding:18px 8px}
+ .faq-list details p{font-size:13px}
+}
+</style>
+\n</head>
 <body>
 <header class="topbar">
   <div class="logo-mark">♥</div>
@@ -98,70 +136,56 @@ footer .footer-brand{font-style:italic}
   <nav><a href="#price">가격 안내</a><a href="#service">서비스</a><a href="#event">이벤트</a><a href="#faq">FAQ</a><a href="#reservation">예약 현황</a></nav>
 </header>
 <main id="home">
-  <section class="hero">
-    <div class="hero-card">
-      <span class="pill">Your Marry Day, A Merry Day!</span>
-      <h1><span>축의대는</span><span>저희가</span><span>맡을게요</span></h1>
-      <p class="hero-desc">축의금 접수부터 방명록, 식권 안내까지.
+  <section class="image-section hero-image"><img src="assets/hero.png" alt="Your Marry Day, A Merry Day! 축의대는 저희가 맡을게요"></section>
 
-두 분의 소중한 날이 더욱 빛날 수 있도록,
-유어메리데이가 함께합니다.</p>
+  <section class="image-section price-image" id="price">
+    <img src="assets/price-cards.png" alt="가격 안내: 1부스 2인 1조 280,000원, 2부스 4인 2조 530,000원">
+    <div class="image-link-overlay price-cta-link">
+      <a href="http://pf.kakao.com/_MQRxiX/chat" target="_blank" rel="noopener" aria-label="예약 문의하기">예약 문의하기</a>
     </div>
   </section>
 
-  <section class="section" id="price">
-    <div class="wrap">
-      <h2 class="section-title center">가격 안내</h2>
-      <div class="prices">
-        <article class="price-card pink"><h3>1부스<br>(2인 1조)</h3><div class="price">280,000</div><div class="price-note">부가세 포함 정찰제</div></article>
-        <article class="price-card lime"><h3>2부스<br>(4인 2조)</h3><div class="price">530,000</div><div class="price-note">부가세 포함 정찰제</div></article>
-      </div>
-      <div class="cta-bar"><h3>원하는 예식 날짜,<br>예약 가능할까요?</h3><a class="btn btn-lime" href="http://pf.kakao.com/_MQRxiX/chat" target="_blank" rel="noopener">예약 문의하기</a></div>
+  <section class="image-section service-image" id="service">
+    <img class="section-heading-image" src="assets/service-heading.png" alt="유어메리데이 서비스">
+    <div class="service-image-grid">
+      <img src="assets/service-prep.png" alt="선도착 및 사전 준비">
+      <img src="assets/service-welcome.png" alt="축의금 접수 및 하객 응대">
+      <img src="assets/service-live.png" alt="유튜브 라이브 영상촬영">
+      <img src="assets/service-ledger.png" alt="디지털 장부">
     </div>
   </section>
 
-  <section class="section" id="service">
-    <div class="wrap">
-      <h2 class="section-title center">유어메리데이 서비스</h2>
-      <p class="section-sub">예식 흐름에 맞춰 전담 담당자가 현장을 맡아요.</p>
-      <div class="service-grid">
-        <article class="service-card blue"><div class="service-icon">💐</div><h3>선도착 및 사전 준비</h3><p>예식 전 미리 도착하여 세팅부터 꼼꼼하게 준비합니다.</p></article>
-        <article class="service-card"><div class="service-icon">💌</div><h3>축의금 접수 · 하객 응대</h3><p>단정한 복장의 전문 인력이 정중하고 친절하게 하객을 맞이하고, 축의금을 안전하게 접수합니다.</p></article>
-        <article class="service-card pink"><div class="service-icon">📹</div><h3>유튜브 라이브 영상촬영</h3><p>전 과정을 라이브로 기록하여 분실이나 누락을 방지하고 투명하게 관리합니다.</p></article>
-        <article class="service-card"><div class="service-icon">📝</div><h3>디지털 장부</h3><p>실시간으로 정확하게 디지털 장부에 기록하여 추후에도 편리하게 확인할 수 있도록 전달드립니다.</p></article>
-      </div>
+  <section class="image-section event-image" id="event">
+    <img class="section-heading-image" src="assets/event-heading.png" alt="유어메리데이 이벤트">
+    <img src="assets/event-cards.png" alt="얼리 계약 혜택 및 블로그 리뷰 이벤트">
+    <div class="image-link-overlay event-link-one">
+      <a href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener" aria-label="얼리 계약 혜택 블로그에서 자세히 보기">블로그에서 자세히 보기</a>
+    </div>
+    <div class="image-link-overlay event-link-two">
+      <a href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener" aria-label="블로그 리뷰 이벤트 자세히 보기">블로그에서 자세히 보기</a>
     </div>
   </section>
 
-  <section class="section" id="event">
-    <div class="wrap">
-      <h2 class="section-title center">유어메리데이 이벤트</h2>
-      <div class="event-grid">
-        <article class="event-card"><div class="event-num">1</div><h3>얼리 계약 혜택</h3><p>문의 후 3일 이내 얼리 계약 시 축의금을 레디백에 담아 안전하게 전달해드립니다 ♡</p><a class="btn" href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener">→ 블로그에서 자세히 보기</a></article>
-        <article class="event-card"><div class="event-num">2</div><h3>블로그 리뷰 이벤트</h3><p>서비스 이용 후 블로그 후기를 남겨주시면, 감사의 마음을 담아 1만원을 페이백해드립니다 ♡</p><a class="btn" href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener">→ 블로그에서 자세히 보기</a></article>
-      </div>
+  <section class="faq-section" id="faq">
+    <img class="section-heading-image" src="assets/faq-heading.png" alt="자주 묻는 질문">
+    <div class="faq-list">
+      <details><summary>서비스 이용 가능 지역은 어디인가요? 🎈</summary><p>현재 서비스 가능 지역은 서울 및 경기도입니다.<br><br>예식 날짜와 장소에 따른 예약 가능 여부는 카카오톡 채널을 통해 문의해 주세요. 자세한 상담을 도와드리겠습니다.</p></details>
+      <details><summary>장부는 어떻게 전달되나요? 📋</summary><p>장부는 구글시트로 실시간 정리해드립니다.<br><br>예식 종료 후 1시간 이내에 구글시트 링크를 전달해드립니다.</p></details>
+      <details><summary>축의금은 밀봉해서 보관하나요, 개봉해서 계수하나요? 💌</summary><p>축의금은 소중한 금액인 만큼, 업체에서도 임의로 계수하지 않고 접수 즉시 밀봉하여 관리합니다. 축의금 봉투에는 고유 번호를 부여하고, 구글 시트(장부)에 번호, 성명, 식권 여부를 빠짐없이 기록해드립니다. 금액 확인은 본인이 직접 진행하시는 방식이 가장 안전합니다.<br><br>유어메리데이는 축의금의 금액을 확인하거나 보관하는 과정에서 발생할 수 있는 불필요한 오해를 최소화하고, 기록과 밀봉을 통해 더욱 안전하게 관리해드립니다. 추후 구글 시트에 금액만 추가로 기재해주시면 되기 때문에, 처음부터 모든 내용을 다시 작성하는 것보다 훨씬 간편하고 안전하게 확인하실 수 있습니다.</p></details>
+      <a class="faq-link" href="http://pf.kakao.com/_MQRxiX/114767391" target="_blank" rel="noopener">더 자세한 FAQ 보기</a>
     </div>
   </section>
 
-  <section class="section" id="faq">
-    <div class="wrap">
-      <h2 class="section-title center">자주 묻는 질문</h2>
-      <div class="faq-list">
-        <details><summary>서비스 이용 가능 지역은 어디인가요? 🎈</summary><p>현재 서비스 가능 지역은 서울 및 경기도입니다.<br><br>예식 날짜와 장소에 따른 예약 가능 여부는 카카오톡 채널을 통해 문의해 주세요. 자세한 상담을 도와드리겠습니다.</p></details>
-        <details><summary>장부는 어떻게 전달되나요? 📋</summary><p>장부는 구글시트로 실시간 정리해드립니다.<br><br>예식 종료 후 1시간 이내에 구글시트 링크를 전달해드립니다.</p></details>
-        <details><summary>축의금은 밀봉해서 보관하나요, 개봉해서 계수하나요? 💌</summary><p>축의금은 소중한 금액인 만큼, 업체에서도 임의로 계수하지 않고 접수 즉시 밀봉하여 관리합니다. 축의금 봉투에는 고유 번호를 부여하고, 구글 시트(장부)에 번호, 성명, 식권 여부를 빠짐없이 기록해드립니다. 금액 확인은 본인이 직접 진행하시는 방식이 가장 안전합니다.<br><br>유어메리데이는 축의금의 금액을 확인하거나 보관하는 과정에서 발생할 수 있는 불필요한 오해를 최소화하고, 기록과 밀봉을 통해 더욱 안전하게 관리해드립니다. 추후 구글 시트에 금액만 추가로 기재해주시면 되기 때문에, 처음부터 모든 내용을 다시 작성하는 것보다 훨씬 간편하고 안전하게 확인하실 수 있습니다.</p></details>
-        <a class="faq-link" href="http://pf.kakao.com/_MQRxiX/114767391" target="_blank" rel="noopener">더 자세한 FAQ 보기</a>
-      </div>
+  <section class="image-section reservation-image" id="reservation">
+    <img src="assets/reservation-status.png" alt="유어메리데이 예약 현황 확인하기">
+    <div class="image-link-overlay reservation-link">
+      <a href="http://pf.kakao.com/_MQRxiX/114951239" target="_blank" rel="noopener" aria-label="예약 현황 확인">예약 현황 확인</a>
     </div>
-  </section>
-
-  <section class="section reservation-section" id="reservation">
-    <div class="wrap">
-      <h2 class="section-title center">유어메리데이 예약 현황</h2>
-      <div class="reservation-box"><h3>유어메리데이<br>예약 현황 확인하기</h3><a class="btn btn-lime" href="http://pf.kakao.com/_MQRxiX/114951239" target="_blank" rel="noopener">예약 현황 확인</a></div>
-      <div class="social-links"><a href="http://pf.kakao.com/_MQRxiX/chat" target="_blank" rel="noopener" aria-label="카카오톡 채널">Ch</a><a class="blog" href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener" aria-label="네이버 블로그">b</a></div>
-      <div class="social-caption">카카오채널, 블로그 바로가기</div>
+    <div class="social-links">
+      <a href="http://pf.kakao.com/_MQRxiX/chat" target="_blank" rel="noopener" aria-label="카카오톡 채널">Ch</a>
+      <a class="blog" href="https://blog.naver.com/yourmarryday/224447076994" target="_blank" rel="noopener" aria-label="네이버 블로그">b</a>
     </div>
+    <div class="social-caption">카카오채널, 블로그 바로가기</div>
   </section>
 </main>
 <footer><div class="footer-make">MAKE!</div><div class="footer-brand">Your Marry Day, A Merry Day.</div></footer>
